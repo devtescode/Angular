@@ -41,23 +41,29 @@ export class LandingpageComponent {
   }
 
   addContent() {
-    const user: UserProfile = {
-      first_name: this.first_name,
-      last_name: this.last_name,
-      Email: this.Email,
-      phone_number: this.phone_number,
-      Gender: this.Gender
-    };
+    
 
-    this.users.push(user);
-    console.log(this.users);
-    localStorage.setItem('contents', JSON.stringify(this.users));
-
-    this.first_name = ""
-    this.last_name = ""
-    this.Email = ""
-    this.phone_number = ""
-    this.Gender = ""
+    if (this.first_name == "" || this.last_name == "" || this.Email == "" || this.phone_number == "" || this.Gender == ""){
+      alert("Enter Something")
+    }
+    else{
+      const user: UserProfile = {
+        first_name: this.first_name,
+        last_name: this.last_name,
+        Email: this.Email,
+        phone_number: this.phone_number,
+        Gender: this.Gender
+     };
+      this.users.push(user);
+      console.log(this.users);
+      localStorage.setItem('contents', JSON.stringify(this.users));
+  
+      this.first_name = ""
+      this.last_name = ""
+      this.Email = ""
+      this.phone_number = ""
+      this.Gender = ""
+    }
   }
 
   DelectBtn(i: number) {
