@@ -41,8 +41,6 @@ export class LandingpageComponent {
   }
 
   addContent() {
-    
-
     if (this.first_name == "" || this.last_name == "" || this.Email == "" || this.phone_number == "" || this.Gender == ""){
       alert("Enter Something")
     }
@@ -76,8 +74,6 @@ export class LandingpageComponent {
   public showDetailsIndex: number = -1;
   navigateToUserDetails(index: number): void {
     console.log(index);
-
-    
     this.showDetailsIndex = index === this.showDetailsIndex ? -1 : index;
     this.routes.navigate([`display/${index}`])
   }
