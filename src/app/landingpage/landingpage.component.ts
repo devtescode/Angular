@@ -80,7 +80,7 @@ export class LandingpageComponent {
   public editMode: boolean = false;
   public editIndex: number | null = null;
   EditBtn(index: number): void {
-    this.editMode = true;
+    // this.editMode = true;
     this.editIndex = index;
 
     const user = this.users[index];
