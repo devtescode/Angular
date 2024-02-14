@@ -35,5 +35,7 @@ export class Bahaviourchild1Component {
 
   sendlist(list:any){
     this.bahaviour.behavior.next(list)
+    console.log(this.bahaviour.behavior);
+    
   }
 }

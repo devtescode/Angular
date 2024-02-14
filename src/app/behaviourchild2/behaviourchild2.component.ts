@@ -12,11 +12,9 @@ export class Behaviourchild2Component {
   constructor(public bahavior: BehaviorService){}
   public  bahavior_obj:any={}
   ngOnInit(){
-    // console.log(this.bahavior);
     this.bahavior.behavior.subscribe(data=>{
-      console.log(data); 
       this.bahavior_obj = data
-      console.log(this.bahavior_obj);
     })
   }
+  
 }
