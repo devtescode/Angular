@@ -7,13 +7,19 @@ import { MydashboardComponent } from './mydashboard/mydashboard.component';
 import { MysignupComponent } from './mysignup/mysignup.component';
 import { MysigninComponent } from './mysignin/mysignin.component';
 import { studentguardGuard } from './guards/studentguard.guard';
+import { ValidatingformComponent } from './validatingform/validatingform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { BehavioursubjectComponent } from './behavioursubject/behavioursubject.component';
 
 export const routes: Routes = [
     {path:'', component: LandingpageComponent},
     {path: 'home', redirectTo: '', pathMatch:'full'},
+    {path: 'behaviour', component: BehavioursubjectComponent },
     {path:'service', component: ServicecomponentComponent},
     {path: 'signin', component: MysigninComponent},
     {path: 'mysignup', component: MysignupComponent},
+    {path: 'validating', component: ValidatingformComponent},
+    {path: 'reactive', component: ReactiveformComponent},
     {path: 'sample', children:[
         {path: '', component: MyappComponent},
         {path: 'deposit', component: LandingpageComponent}

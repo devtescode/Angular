@@ -17,4 +17,7 @@ export class LandingpageserviceService {
   public returnnum(){
     return this.numberarray
   }
+  public getstudents(){
+   return JSON.parse(localStorage['newstudents'])
+  }
 }

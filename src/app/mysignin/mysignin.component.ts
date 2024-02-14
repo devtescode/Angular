@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginserviceService } from '../services/loginservice.service';
 
 interface Studentinterface {
   email: string,
@@ -16,7 +17,7 @@ interface Studentinterface {
   styleUrl: './mysignin.component.css'
 })
 export class MysigninComponent {
-  constructor(public routes: Router) { }
+  constructor(public routes: Router, public service : LoginserviceService) { }
   public email = ''
   public password = ''
   public message = ''
@@ -33,6 +34,7 @@ export class MysigninComponent {
     let currectuser = this.studentarray.find((student, index) => this.email == student.email && this.password == student.password)
     if (currectuser) {
       localStorage.setItem('current_user', JSON.stringify(currectuser))
+      
       this.routes.navigate(['/dashboard'])
     }
     else {
