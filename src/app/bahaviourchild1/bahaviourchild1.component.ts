@@ -38,4 +38,6 @@ export class Bahaviourchild1Component {
     console.log(this.bahaviour.behavior);
     
   }
+
+ 
 }

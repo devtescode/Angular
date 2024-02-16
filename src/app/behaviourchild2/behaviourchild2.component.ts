@@ -15,6 +15,5 @@ export class Behaviourchild2Component {
     this.bahavior.behavior.subscribe(data=>{
       this.bahavior_obj = data
     })
-  }
-  
+  }  
 }
