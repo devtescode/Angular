@@ -2,12 +2,10 @@
     <div>
         <div class="d-flex justify-content-between">
             <div>
-                <p>
-                    Firstname
-                </p>
+                <p>Firstname</p>
             </div>
             <div>
-                <p>{{bahavior_obj.firstname}}</p>
+                <input value="{{bahavior_obj.firstname}}" class="form-control" type="text">
             </div>
         </div>
         
@@ -18,7 +16,7 @@
                 </p>
             </div>
             <div>
-                <p>{{bahavior_obj.lastname}}</p>
+                <input value="{{bahavior_obj.lastname}}" class="form-control" type="text">
             </div>
         </div>
 
@@ -29,7 +27,7 @@
                 </p>
             </div>
             <div>
-                <p>{{bahavior_obj.age}}</p>
+                <input value="{{bahavior_obj.age}}" class="form-control" type="text">
             </div>
         </div>
 
@@ -40,8 +38,11 @@
                 </p>
             </div>
             <div>
-                <p>{{bahavior_obj.email}}</p>
+                <input value="{{bahavior_obj.email}}" class="form-control" type="text">
             </div>
+        </div>
+        <div>
+            <button (click)="EditBtn()" class="btn btn-success">Edit</button>
         </div>
     </div>
 </div>

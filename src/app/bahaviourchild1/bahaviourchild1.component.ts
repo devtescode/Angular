@@ -10,34 +10,44 @@ import { BehaviorService } from '../service/behavior.service';
   styleUrl: './bahaviourchild1.component.css'
 })
 export class Bahaviourchild1Component {
-  constructor(public bahaviour : BehaviorService){}
-  public bahavior_array:any=[
+  // public bahavior_array:any=[
+    //   {
+  //     firstname: "john",
+  //     lastname: "joy",
+  //     age: "22",
+  //     email: "joy@gmail.com"
+  //   },
+  //   {
+  //     firstname: "ayo",
+  //     lastname: "dele",
+  //     age: "32",
+  //     email: "dele@gmail.com"
+  //   },
+  
+  // ]
+  
+  signupArray : any[]=[
     {
-      firstname: "john",
-      lastname: "joy",
-      age: "22",
-      email: "joy@gmail.com"
-    },
-    {
-      firstname: "ayo",
-      lastname: "dele",
-      age: "32",
-      email: "dele@gmail.com"
-    },
-    {
-      firstname: "captain",
-      lastname: "college",
-      age: "44",
-      email: "captaine@gmail.com"
-    },
-
+      firstname: "",
+      lastname: "",
+      age: "",
+      email: "",
+    }  
   ]
-
+  constructor(public bahaviour : BehaviorService){}
   sendlist(list:any){
     this.bahaviour.behavior.next(list)
-    console.log(this.bahaviour.behavior);
-    
+    // console.log(this.bahaviour.behavior); 
+    const signupstored = JSON.parse(localStorage['signups'])
+    if (signupstored){
+      this.signupArray = signupstored
+      console.log(this.signupArray);
+      
+    }
   }
+  // sendlist(list:any){
 
- 
+  // }
+
+
 }

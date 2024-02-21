@@ -10,11 +10,17 @@ import { studentguardGuard } from './guards/studentguard.guard';
 import { ValidatingformComponent } from './validatingform/validatingform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { BehavioursubjectComponent } from './behavioursubject/behavioursubject.component';
+import { SignupbehaviourComponent } from './signupbehaviour/signupbehaviour.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { EventparentComponent } from './eventparent/eventparent.component';
 
 export const routes: Routes = [
     {path:'', component: LandingpageComponent},
     {path: 'home', redirectTo: '', pathMatch:'full'},
+    {path: 'pipe', component: PipeComponent},
+    {path: 'event', component: EventparentComponent},
     {path: 'behaviour', component: BehavioursubjectComponent },
+    {path: 'signupbehaviour', component: SignupbehaviourComponent},
     {path:'service', component: ServicecomponentComponent},
     {path: 'signin', component: MysigninComponent},
     {path: 'mysignup', component: MysignupComponent},

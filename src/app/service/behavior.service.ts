@@ -8,9 +8,9 @@ export class BehaviorService {
 
   constructor() { }
   public behavior = new BehaviorSubject<any>({
-    firstname: "Teslim",
-    lastname: "Teslim",
-    age: "20",
-    email: "teslim@gmail.com"
+    firstname: "",
+    lastname: "",
+    age: "",
+    email: ""
   })
 }
